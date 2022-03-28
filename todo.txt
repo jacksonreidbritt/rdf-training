@@ -1,3 +1,5 @@
-1. Clean up app.componment.html
-2. Clean up app.componment tests
+1. Clean up app.component.html
+2. Clean up app.component tests
 3. Render profile comp in app comp
+4. Import the jsonld file, instead of having separate
+5. Build out a service for this

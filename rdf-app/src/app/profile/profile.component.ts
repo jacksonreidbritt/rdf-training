@@ -7,11 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+  public profileData = {
+    "@context" : "https://schema.org/",
+    "@type": "Thing",
+    "name" : "jackson"
+  };
   public profilename = "jackson";
 
   constructor() { }
 
   ngOnInit(): void {
+    this.profilename = this.profileData.name
   }
 
 }

@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileComponent } from './profile.component';
+import {AppComponent} from "../app.component";
 
 describe('ProfileComponent', () => {
   let component: ProfileComponent;
@@ -26,4 +27,14 @@ describe('ProfileComponent', () => {
   it('should match the json created', () => {
     expect(component.profilename).toBe("jackson")
   });
+
+  it('should render name under p tag', () => {
+    const fixture = TestBed.createComponent(ProfileComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('p')?.textContent)
+      .toContain('jackson');
+  });
+
+
 });

@@ -22,4 +22,8 @@ describe('ProfileComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should match the json created', () => {
+    expect(component.profilename).toBe("jackson")
+  });
 });

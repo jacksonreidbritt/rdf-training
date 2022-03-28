@@ -25,7 +25,7 @@ describe('ProfileComponent', () => {
   });
 
   it('should match the json created', () => {
-    expect(component.profilename).toBe("jackson")
+    expect(component.profileName).toBe("jackson")
   });
 
   it('should render name under p tag', () => {

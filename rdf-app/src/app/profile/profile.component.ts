@@ -12,12 +12,12 @@ export class ProfileComponent implements OnInit {
     "@type": "Thing",
     "name" : "jackson"
   };
-  public profilename = "jackson";
+  public profileName = "jackson";
 
   constructor() { }
 
   ngOnInit(): void {
-    this.profilename = this.profileData.name
+    this.profileName = this.profileData.name
   }
 
 }

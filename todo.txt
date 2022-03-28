@@ -1,0 +1,3 @@
+1. Clean up app.componment.html
+2. Clean up app.componment tests
+3. Render profile comp in app comp

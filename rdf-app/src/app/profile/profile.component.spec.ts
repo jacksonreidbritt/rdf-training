@@ -32,7 +32,7 @@ describe('ProfileComponent', () => {
     const fixture = TestBed.createComponent(ProfileComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('p')?.textContent)
+    expect(compiled.querySelector('#profileName')?.textContent)
       .toContain('jackson');
   });
 

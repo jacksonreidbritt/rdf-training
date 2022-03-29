@@ -18,8 +18,8 @@ export class ProfileComponent implements OnInit {
   constructor(private profileService: ProfileService) { }
 
   async ngOnInit(): Promise<void> {
-    this.profileName = this.profileData.name
     this.profileData = await this.profileService.getJsonld();
+    this.profileName = this.profileData.name
   }
 
 }

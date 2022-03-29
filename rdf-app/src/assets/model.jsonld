@@ -1,6 +1,6 @@
 {
     "@context" : "https://schema.org/",
     "@type": "Thing",
-    "@id": "http://example.com/thing/jackson",
-    "name": "jackson"
+    "@id": "http://example.com/thing/patrick",
+    "name": "patrick"
 }

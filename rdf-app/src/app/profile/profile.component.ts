@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProfileService} from "./services/profile.service";
 
 @Component({
   selector: 'app-profile',
@@ -14,10 +15,11 @@ export class ProfileComponent implements OnInit {
   };
   public profileName = "jackson";
 
-  constructor() { }
+  constructor(private profileService: ProfileService) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.profileName = this.profileData.name
+    this.profileData = await this.profileService.getJsonld();
   }
 
 }

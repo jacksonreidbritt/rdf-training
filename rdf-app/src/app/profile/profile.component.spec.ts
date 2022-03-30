@@ -14,16 +14,15 @@ describe('ProfileComponent', () => {
   let profileService: ProfileService;
   let fixture: ComponentFixture<ProfileComponent>;
 
-  beforeEach(() => {
-    httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
-    profileService = new ProfileService(httpClientSpy);
-  });
+  // beforeEach(() => {
+  //   httpClientSpy = jasmine.createSpyObj('HttpClient', ['get']);
+  //   profileService = new ProfileService(httpClientSpy);
+  // });
 
 
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
       declarations: [ProfileComponent]
     })
       .compileComponents();
@@ -40,25 +39,14 @@ describe('ProfileComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should match the json created', () => {
-    expect(component.profileName).toBe("jackson")
-  });
-
   it('should render name under p tag', () => {
     const fixture = TestBed.createComponent(ProfileComponent);
+    fixture.componentInstance.profileData = {
+      'name': 'jackson'
+    }
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('#profileName')?.textContent)
       .toContain('jackson');
-  });
-
-  it('should render patrick name under p tag', async () => {
-    const fixture = TestBed.createComponent(ProfileComponent);
-    fixture.componentInstance.ngOnInit().then(() => {
-      fixture.detectChanges();
-      const compiled = fixture.nativeElement as HTMLElement;
-      expect(compiled.querySelector('#profileName')?.textContent)
-        .toContain('patrick');
-    });
   });
 });

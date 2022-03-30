@@ -34,6 +34,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('app-profile')?.textContent).toContain('jackson');
+    expect(compiled.querySelector('app-profile')).toBeTruthy();
   });
 });

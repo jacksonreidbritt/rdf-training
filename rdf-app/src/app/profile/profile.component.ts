@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {ProfileService} from "./services/profile.service";
 
 @Component({
@@ -8,18 +8,12 @@ import {ProfileService} from "./services/profile.service";
 })
 export class ProfileComponent implements OnInit {
 
-  public profileData = {
-    "@context" : "https://schema.org/",
-    "@type": "Thing",
-    "name" : "jackson"
-  };
-  public profileName = "jackson";
+  @Input() public profileData:any = { };
 
-  constructor(private profileService: ProfileService) { }
+  constructor() { }
 
-  async ngOnInit(): Promise<void> {
-    this.profileData = await this.profileService.getJsonld();
-    this.profileName = this.profileData.name
+  ngOnInit(): void {
+
   }
 
 }

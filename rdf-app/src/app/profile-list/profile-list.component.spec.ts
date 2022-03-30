@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProfileListComponent } from './profile-list.component';
+import {AppComponent} from "../app.component";
 
 describe('ProfileListComponent', () => {
   let component: ProfileListComponent;
@@ -31,5 +32,13 @@ describe('ProfileListComponent', () => {
     // render a list of things
 
 
-  })
+  });
+
+
+  it('should render profile component', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('app-profile')).toBeTruthy();
+  });
 });

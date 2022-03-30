@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ProfileComponent} from './profile/profile.component';
 import {HttpClientModule} from "@angular/common/http";
-import { ProfileListComponent } from './profile-list/profile-list.component';
+import {ProfileListComponent} from './profile-list/profile-list.component';
 
 @NgModule({
   declarations: [
@@ -21,4 +21,5 @@ import { ProfileListComponent } from './profile-list/profile-list.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
